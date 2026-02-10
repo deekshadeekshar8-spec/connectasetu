@@ -1,11 +1,25 @@
-<div align="center">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+# Connectasetu CRM Portal
 
-  <h1>Built with AI Studio</h2>
+A full-stack employee management and call tracking system.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Features
+- **Strict RBAC**: Roles for Admin, TeamA, TeamB, and Employees.
+- **Truecaller Logic**: Automatic identification of callers via linked Contacts DB.
+- **Excel Hub**: Bulk upload contacts via `.xlsx`.
+- **Call Performance**: Visual analytics for call volume and outcomes.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Setup
+1. **Backend**:
+   - `npm install express mongoose jsonwebtoken bcryptjs multer xlsx`
+   - Configure `JWT_SECRET` and `MONGODB_URI` in `.env`.
+2. **Frontend**:
+   - Built with React 19 + Tailwind CSS.
+   - Run via local server.
+3. **Syncing**:
+   - Ensure Mobile SDK uses the `POST /api/calls/sync` endpoint with a valid JWT.
 
-</div>
+## Security
+- Password hashing with Bcrypt.
+- Middleware verification for every sensitive route.
+- Admin-only access for global statistics and call recordings.

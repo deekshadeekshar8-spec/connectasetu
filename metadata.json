@@ -1,0 +1,7 @@
+{
+  "name": "connectasetu CRM Portal",
+  "description": "A comprehensive MERN-style employee portal for call tracking, CRM management, and role-based performance monitoring, featuring Excel contact imports and Truecaller-style identification.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
